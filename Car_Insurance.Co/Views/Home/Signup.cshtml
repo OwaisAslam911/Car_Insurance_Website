@@ -1,0 +1,106 @@
+﻿@model Car_Insurance.Co.Models.UserDetail
+@{
+    ViewData["Title"] = "Signup";
+}
+
+<!-- Page Title -->
+<section class="page-title">
+    <div class="background-container">
+        <img class="left-image" src="https://themeim.com/demo/carsore/images/background/header-left-bg.png" alt="" />
+        <img class="right-image" src="./images/background/2.jpg" alt="" />
+    </div>
+    <div class="service-container">
+        <div class="section-icons-outer parallax-scene-1">
+            <div data-depth="0.20" class="pattern-layer" style="background-image: url(images/background/pattern-8.png)">
+            </div>
+        </div>
+
+        <div class="auto-container">
+            <h1>Sign Up</h1>
+            <ul class="page-breadcrumb">
+                <li><a asp-controller="Home" asp-action="Index">home</a></li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Login Section -->
+<section class="login-section style-two">
+    <div class="auto-container">
+        <div class="login-box">
+            <div class="section-icons-outer parallax-scene-2">
+                <div data-depth="0.20" class="icon-layer-one" style="background-image: url(images/icons/icon-1.png)">
+                </div>
+                <div data-depth="0.40" class="icon-layer-two"
+                     style="background-image: url(images/background/pattern-4.png)"></div>
+            </div>
+            <!-- Sec Title -->
+            <div class="title-box">
+                <h2>Sign Up</h2>
+            </div>
+
+            <!-- Form Box -->
+            <div class="form-box">
+                <!-- Login Form -->
+                <div class="styled-form">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Enter your UserName</label>
+                            <span class="icon flaticon-envelope"></span>
+                            <input type="text" asp-for="Username" class="form-control" placeholder="User Name" required />
+                        </div>
+                        <p class="text-danger">@ViewBag.uniquename</p>
+                        <div class="form-group">
+                            <label>Enter your Contact</label>
+                            <span class="icon flaticon-envelope"></span>
+                            <input type="number" asp-for="Usercontact" class="form-control" placeholder="User Contact" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter your Email</label>
+                            <span class="icon flaticon-envelope"></span>
+                            <input type="email" asp-for="Useremail" class="form-control" placeholder="User Email" required />
+                        </div>
+                        <p class="text-danger">@ViewBag.uniqueemail</p>
+                        <div class="form-group">
+                            <label>Enter your Password</label>
+                            <span class="icon flaticon-padlock-1"></span>
+                            <input type="password" asp-for="Userpassword" class="form-control" placeholder="Password" required />
+                            <span class="eye-icon flaticon-eye"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Re-enter your password</label>
+                            <span class="icon flaticon-padlock-1"></span>
+                            <input type="password" name="ConfirmPassword" class="form-control" placeholder="Re-enter Password" required />
+                            <span class="eye-icon flaticon-eye"></span>
+                        </div>
+                        <p class="text-danger">@ViewBag.confirmpass</p>
+                        <div class="form-group">
+                            <div class="check-box">
+                                <input type="checkbox" name="AgreeTerms" id="AgreeTerms" required />
+                                <label for="AgreeTerms">
+                                    Agree with our company
+                                    <a asp-controller="Home" asp-action="Privacy">Policy Privacy</a> and <br />
+                                    <a asp-controller="Home" asp-action="Tearms">Term condition</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="theme-btn btn-style-one">
+                                <span class="txt">Sign up</span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <div class="users">
+                                Already have an account? <a asp-controller="Home" asp-action="Login">Login</a>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Login Section -->
+

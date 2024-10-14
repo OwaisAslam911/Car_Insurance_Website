@@ -1,0 +1,248 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor accessor;
+@model Car_Insurance.Co.Models.InsuranceViewModel;
+@{
+    ViewData["Title"] = "InsuranceForm";
+    var user = accessor.HttpContext.Session.GetString("username");
+    var email = accessor.HttpContext.Session.GetString("useremail");
+}
+
+<!-- Page Title -->
+<section class="page-title">
+    <div class="background-container">
+        <img class="left-image" src="https://themeim.com/demo/carsore/images/background/header-left-bg.png" alt="" />
+        <img class="right-image" src="https://themeim.com/demo/carsore/images/background/insurance-form-right-bg.png"
+             alt="" /><img src="~/home/images/background/pattern-8.png" />
+    </div>
+    <div class="service-container" style="
+              background-image: url('images/background/services-left-bg.png');
+            ">
+        <div class="section-icons-outer parallax-scene-1">
+            <div data-depth="0.20" class="pattern-layer" style="background-image: url('./Home/images/background/pattern-8.png')">
+            </div>
+        </div>
+
+        <div class="auto-container">
+            <h1>Insurance Form</h1>
+            <ul class="page-breadcrumb">
+                <li><a asp-controller="Home" asp-action="Index">home</a></li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Insurance Page Section -->
+<section class="insurance-page-section">
+    <div class="auto-container">
+        <div class="inner-container">
+            <!-- Sec Title -->
+            <div class="sec-title">
+                <h2>
+                    Up to 50% Off* on <br />
+                    Car Insurance
+                </h2>
+                <div class="text">
+                    We are a professional and creative company and we offer you a
+                    trusty insurance on <br />
+                    your veicle.
+                </div>
+            </div>
+            <!-- End Sec Title -->
+            <div class="section-icons-outer parallax-scene-2">
+                <div data-depth="0.20" class="icon-layer" style="background-image: url(images/icons/icon-1.png)"></div>
+            </div>
+            <form method="post">
+            <div class="row clearfix">
+                <!-- Column -->
+                <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <h2>Owner Info</h2>
+                        <!-- Login Form -->
+                        <div class="styled-form ">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label>Enter your Name *</label>
+                                        <span class="icon flaticon-padlock-1"></span>
+                                        <input asp-for="userDetailTable.Username" type="text"  value="@user" placeholder="Your Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Enter your Email*</label>
+                                        <span class="icon flaticon-envelope"></span>
+                                        <input type="email" asp-for="userDetailTable.Useremail" value="@email" placeholder="Your Email" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Re-enter your password</label>
+                                        <span class="icon flaticon-padlock-1"></span>
+                                        <input type="password" asp-for="userDetailTable.Userpassword" value="" placeholder="Your Password" required />
+                                    </div>
+                                    <p class="text-danger">@ViewBag.failedpass</p>
+                                </fieldset>
+                                <h2>Veicle Info</h2>
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label>What is your vehicle Name*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <input asp-for="userCarDetail.Carname" type="text" value="" placeholder="Your Vehicle Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is your vehicle number*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <input asp-for="userCarDetail.Carnumber" type="text"  value="" placeholder="Your policy number" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is your Engine number*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <input asp-for="userCarDetail.Enginenumber" type="text"  value="" placeholder="Your car's engine number" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is your city*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <select asp-for="userCarDetail.City" class="custom-select-box insurence-form-border nice-select">
+                                            <option>Select City</option>
+                                            <option value="Karachi">Karachi</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Faisalabad">Faisalabad</option>
+                                            <option value="Lahore">Lahore</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is your car model?*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <input asp-for="userCarDetail.Carmodel" type="number" value="" placeholder="Your car's Model" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is your vehicle Color*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <input asp-for="userCarDetail.Carcolor" type="text" placeholder="Your Car Color" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is your Car CC*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <input type="number" asp-for="userCarDetail.Carrcc"  placeholder="Your Car CC" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>What is you car Purchase date & year*</label>
+                                        <span class="icon flaticon-edit"></span>
+                                        <span class="calendar-icon flaticon-calendar"></span>
+                                        <input asp-for="insurancePolicyTable.StartDate" class="datepicker" autocomplete="off" type="text" 
+                                               placeholder="DD/MM/YYYY" required />
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="row clearfix">
+                                        <!-- Column -->
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h6>Vehicle for:</h6>
+                                            <div class="form-group margin">
+                                                <div class="radio-box">
+                                                    <input asp-for="userCarDetail.Purpose" value="Commercial" type="radio" name="userCarDetail.Purpose" id="type-19" />
+                                                    <label for="type-19">Commercial use</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group margin">
+                                                <div class="radio-box">
+                                                    <input asp-for="userCarDetail.Purpose" value="Personal" type="radio" name="userCarDetail.Purpose" id="type-22" />
+                                                    <label for="type-22">Personal Use</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="form-group">
+                                    <button type="submit" class="theme-btn btn-style-one">
+                                        <span class="txt">Confirm <i class="fa fa-arrow-circle-right"></i></span>
+                                    </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <h2>Plans</h2>
+
+                        <!-- Login Form -->
+                        <div class="styled-form">
+
+                                <!-- Replace 'process-form.php' with your actual form processing endpoint -->
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="radio-box-two">
+                                            <input asp-for="orderDetail.PlaneId" type="radio" checked id="type-5" value="1" />
+                                            <label for="type-5">
+                                                <strong>Accident $5000</strong> This is 10% discount
+                                                <span class="radio-two-icon flaticon-hand"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="radio-box-two">
+                                            <input asp-for="orderDetail.PlaneId" type="radio" id="type-6" value="2" />
+                                            <label for="type-6">
+                                                <strong>Theft $9000</strong> This is 10% discount
+                                                <span class="radio-two-icon flaticon-hand"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="radio-box-two">
+                                            <input asp-for="orderDetail.PlaneId" type="radio" id="type-7" value="3" />
+                                            <label for="type-7">
+                                                <strong>Third Party $3500</strong> This is 10% discount
+                                                <span class="radio-two-icon flaticon-hand"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="radio-box-two">
+                                            <input asp-for="orderDetail.PlaneId" type="radio" id="type-9" value="4" />
+                                            <label for="type-9">
+                                                <strong>Terrorism $7500</strong> This is 10% discount
+                                                <span class="radio-two-icon flaticon-hand"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="radio-box-two">
+                                            <input asp-for="orderDetail.PlaneId" type="radio" id="type-10" value="5" />
+                                            <label for="type-10">
+                                                <strong>Depreciation Waiver $3000</strong> This is 10% discount
+                                                <span class="radio-two-icon flaticon-hand"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                        </div>
+
+            </form>
+                        <!-- Expiry Box -->
+                        <div class="expiry-box">
+                            <div class="box-inner" style="
+                          background-image: url(images/resource/insurance.jpg);
+                        ">
+                                <h3>
+                                    We will remind you before <br />
+                                    your current policy expire.
+                                </h3>
+                                <a class="btn-style-two theme-btn" href="about.html">
+                                    <span class="txt">Click Here</span><i class="fa fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Expiry Box -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Section -->
+

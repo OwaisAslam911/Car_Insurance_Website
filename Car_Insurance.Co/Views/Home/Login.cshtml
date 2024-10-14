@@ -1,0 +1,84 @@
+﻿@model Car_Insurance.Co.Models.UserDetail
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!-- Page Title -->
+<section class="page-title">
+    <div class="background-container">
+        <img class="left-image" src="https://themeim.com/demo/carsore/images/background/header-left-bg.png" alt="" />
+        <img class="right-image" class="right-image" src="~/Home/images/carImages/teamSlide.jpg" alt="" />
+    </div>
+    <div class="service-container" style="background-image: url(images/background/services-left-bg.png);
+          ">
+        <div class="section-icons-outer parallax-scene-1">
+            <div data-depth="0.20" class="pattern-layer" style="background-image: url(./Home/images/background/pattern-8.png)">
+            </div>
+        </div>
+
+        <div class="auto-container">
+            <h1>Login In</h1>
+            <ul class="page-breadcrumb">
+                <li><a asp-controller="Home" asp-action="Index">home</a></li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Login Section -->
+<section class="login-section">
+    <div class="auto-container">
+        <div class="login-box">
+            <div class="section-icons-outer parallax-scene-2">
+                <div data-depth="0.20" class="icon-layer-one" style="background-image: url(./Home/images/icons/icon-1.png)"></div>
+                <div data-depth="0.40" class="icon-layer-two"
+                     style="background-image: url(./Home/images/background/pattern-4.png)"></div>
+            </div>
+            <!-- Sec Title -->
+            <div class="title-box">
+                <h2>Login in</h2>
+            </div>
+
+            <!-- Form Box -->
+            <div class="form-box">
+                <!-- Login Form -->
+                <div class="styled-form">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Enter your Email</label>
+                            <span class="icon flaticon-envelope"></span>
+                            <input asp-for="Useremail" type="text" value="" placeholder="User Name" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter your Password</label>
+                            <span class="icon flaticon-padlock-1"></span>
+                            <input type="password" asp-for="Userpassword" class="form-control" placeholder="Password" required />
+                            <span class="eye-icon flaticon-eye"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="check-box">
+                                <input type="checkbox" name="AgreeTerms" id="AgreeTerms" required />
+                                <label for="AgreeTerms">
+                                   Remember Password
+                                </label>
+                            </div>
+                        </div>
+                        <p class="text-danger">@ViewBag.failed</p>
+                        <div class="form-group text-center">
+                            <button type="submit" class="theme-btn btn-style-one">
+                                <span class="txt">Login</span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <div class="users">
+                                Don't have account? <a asp-controller="Home" asp-action="signup">Sign up</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Login Section -->

@@ -1,0 +1,163 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor accessor;
+@model Car_Insurance.Co.Models.InsuranceViewModel
+@{
+    ViewData["Title"] = "BillingInfo";
+    var carcc = accessor.HttpContext.Session.GetString("Carcc");
+    var carcolor = accessor.HttpContext.Session.GetString("carcolor");
+    var date = accessor.HttpContext.Session.GetString("date");
+    var UserName = accessor.HttpContext.Session.GetString("username");
+    var UserEmail = accessor.HttpContext.Session.GetString("useremail");
+    var PolicyNo = accessor.HttpContext.Session.GetString("policyNo");
+    var carEngine = accessor.HttpContext.Session.GetString("carEngine");
+    var Carmodel = accessor.HttpContext.Session.GetString("Carmodel");
+    var purpose = accessor.HttpContext.Session.GetString("purpose");
+    var city = accessor.HttpContext.Session.GetString("city");
+    var chesisNumber = accessor.HttpContext.Session.GetString("chesisNumber");
+    var carNumber = accessor.HttpContext.Session.GetString("carNumber");
+    var carName = accessor.HttpContext.Session.GetString("carName");
+    var startdate = accessor.HttpContext.Session.GetString("policyStart");
+    var planname = accessor.HttpContext.Session.GetString("planname");
+    var planprice = accessor.HttpContext.Session.GetString("planprice");
+}
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height:normal;
+        }
+
+    .container1 {
+            box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 60px;
+            max-width: 650px;
+            margin: 0 auto;
+            color: black;
+            max-height: fit-content;
+        }
+
+
+        h2 {
+
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid black;
+        }
+
+        .policy-details {
+            margin-bottom: 20px;
+        }
+
+            .policy-details p {
+                margin: 5px 0;
+            }
+
+        .coverage-details {
+            margin-bottom: 20px;
+        }
+
+            .coverage-details p {
+                margin: 5px 0;
+            }
+
+        .terms-conditions {
+            margin-bottom: 20px;
+        }
+
+            .terms-conditions p {
+                margin: 5px 0;
+            }
+
+        .certification {
+            margin-bottom: 20px;
+        }
+
+            .certification p {
+                margin: 5px 0;
+            }
+
+        .signature {
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+
+
+    <div id="contentToConvert" class="container1">
+       
+        <h2>Insurance Policy</h2>
+        <div class="policy-details">
+           
+            <p><strong>Policy Number:</strong> @PolicyNo</p>
+        <p><strong>Policy holder:</strong> @UserName</p>
+        <p><strong>Policy holder Email:</strong> @UserEmail</p>
+            <p><strong>Insured Vehicle:</strong> @carName</p>
+            <p><strong>Effective Date:</strong>@startdate</p>
+            <p><strong>Expiry Date:</strong>One Year</p>
+        </div>
+        <div class="coverage-details">
+            <p><strong>Insurance Plan :</strong> @planname</p>
+            <p><strong>Amount paid:</strong> @planprice</p>
+        </div>
+        <div class="terms-conditions">
+            <p><strong>Terms and Conditions:</strong></p>
+            <p>The policy is valid only upon payment of the premium.</p>
+            <p>Coverage is subject to terms and conditions outlined in the policy document.</p>
+            <p>Claims process and requirements are as per company guidelines.</p>
+        </div>
+        <div class="certification">
+            <p><strong>Certification:</strong></p>
+            <p>This is to certify that the above-mentioned vehicle is insured with Carsore Company as per the terms and conditions mentioned herein.</p>
+        </div>
+        <div class="signature">
+            <p><strong>Authorized Signature:</strong> Ceo</p>
+        </div>
+    </div>
+<div class="download-section d-flex justify-content-center">
+    <p>
+        <a asp-controller="Home" asp-action="ThankyouForm" id="downloadLink">
+            <i class="fa fa-download"></i> Download Insurance Policy PDF
+        </a>
+    </p>
+</div>
+@* <!-- Content to convert into PDF -->
+<div id="contentToConvert">
+    <h1>Insurance Policy</h1>
+    <p>This is your insurance policy details...</p>
+</div>
+ *@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('downloadLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default link behavior (e.g., navigating to a new page)
+
+            var element = document.getElementById('contentToConvert');
+
+            var opt = {
+                margin: 1,
+                filename: 'InsurancePolicy.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // Generate PDF from element and trigger download
+            html2pdf().set(opt).from(element).save().then(function () {
+                // Optional: Redirect to ASP.NET Core action after PDF is generated
+                window.location.href = '@Url.Action("ThankyouForm", "Home")';
+            }).catch(function (error) {
+                console.error('Error generating PDF:', error);
+            });
+        });
+    });
+</script>
+
+

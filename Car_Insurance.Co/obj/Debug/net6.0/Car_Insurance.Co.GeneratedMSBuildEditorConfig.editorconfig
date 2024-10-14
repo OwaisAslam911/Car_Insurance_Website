@@ -1,0 +1,155 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Car_Insurance.Co
+build_property.RootNamespace = Car_Insurance.Co
+build_property.ProjectDir = C:\Users\AA\source\repos\Adrein10\Car_Insurance.Co\Car_Insurance.Co\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\AA\source\repos\Adrein10\Car_Insurance.Co\Car_Insurance.Co
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/AdminInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5JbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/AdminInfoUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5JbmZvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/customerDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY3VzdG9tZXJEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/insuranceApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW5zdXJhbmNlQXBwcm92YWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/Insurances.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5zdXJhbmNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/Mails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/RegisterAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0ZXJBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Admin/vehicalInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdmVoaWNhbEluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/BillingInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCaWxsaW5nSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/InsuranceForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnN1cmFuY2VGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/NewsDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/ServiceDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Team.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/TeamDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFtRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/Tearms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFybXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Home/ThankyouForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGFua3lvdUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Shared/_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AA/source/repos/Adrein10/Car_Insurance.Co/Car_Insurance.Co/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6moyvzb5qg

@@ -1,0 +1,126 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor accessor;
+@{
+    //Admin info
+    var adminname = accessor.HttpContext.Session.GetString("adminname");
+    var adminemail = accessor.HttpContext.Session.GetString("adminemail");
+    var adminid = accessor.HttpContext.Session.GetString("adminid");
+    // Ceo info 
+    var ceoname = accessor.HttpContext.Session.GetString("ceoname");
+    var ceoemail = accessor.HttpContext.Session.GetString("ceoemail");
+    var ceoid = accessor.HttpContext.Session.GetString("ceoid");
+    
+}
+
+@{
+    Layout = "_Admin";
+}
+@{
+    ViewData["Title"] = "profile";
+}
+<div class="content-wrapper">
+    <div class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-lg-12">
+                <div class="card profile-card-2">
+                    
+                    <div class="card-body pt-5">
+                       
+                        <h5 class="card-title">
+                            @if(adminname != null)
+                            {
+                                @adminname
+                            }else
+                            {
+                                @ceoname
+                            }
+                        </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="icon-block">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card-body border-top border-light">
+                        <div class="media align-items-center">
+                            <div class="icon" data-code="f203" data-name="account-box">
+                                <a href="javascript:void();"><i class="zmdi zmdi-account-box" style="font-size: 30px;"></i></a>
+                            </div>
+                            <div class="media-body text-left ml-3">
+                                @if (adminname != null)
+                                {
+                                    <p>Admin Id <span class="float-right"></span></p>
+                                }
+                                else
+                                {
+                                    <p>
+                                        Ceo Id<span class="float-right"></span></p>
+                                }
+                              
+                                <h6>
+                                    @if (adminid != null)
+                                    {
+                                        @adminid
+                                    }
+                                    else
+                                    {
+                                        @ceoid
+                                    }
+                                </h6>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media align-items-center">
+                            <div class="icon" data-code="f200" data-name="account-box-mail">
+                                <a href="javascript:void();"><i class="zmdi zmdi-account-box-mail" style="font-size: 30px;"></i></a>
+                            </div>
+                            <div class="media-body text-left ml-3">
+                                <div class="progress-wrapper">
+                                    <p>Email <span class="float-right"></span></p>
+                                    <h6>
+                                        @if (adminemail != null)
+                                        {
+                                            @adminemail
+                                        }
+                                        else
+                                        {
+                                            @ceoemail
+                                        }
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media align-items-center">
+                            <div class="icon" data-code="f202" data-name="account-box-phone">
+                                <a href="javascript:void();"><i class="zmdi zmdi-account-box-phone" style="font-size: 30px;"></i> </a>
+                            </div>
+                            <div class="media-body text-left ml-3">
+                                <div class="progress-wrapper">
+                                    <p>Phone <span class="float-right"></span> </p>
+                                    <h6>0374337397</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
+
+    </div>
+    <!-- End container-fluid-->
+</div>

@@ -1,0 +1,60 @@
+﻿@model Car_Insurance.Co.Models.AdminDetail
+@{
+    Layout = "_Admin";
+}
+@{
+    ViewData["Title"] = "RegisterAdmin";
+}
+
+<div class="content-wrapper  " >
+    <div class="container-fluid ">
+
+        <div class="row mt-3 d-flex justify-content-center" >
+            <div class="col-lg-6" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title d-flex justify-content-center py-3">Register Admin</div>
+                        <hr>
+                        <form class="my-5" method="post">
+                            <div class="form-group px-2 mt-3">
+                                <label for="input-1" >Name</label>
+                                <input asp-for="AdminName" type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+                            </div>
+                            <p class="text-danger">@ViewBag.Adminuniquename</p>
+                            <div class="form-group px-2 mt-3">
+                                <label for="input-2">Email</label>
+                                <input asp-for="AdminEmail" type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
+                            </div>
+                            <p class="text-danger">@ViewBag.Adminuniqueemail</p>
+                            <div class="form-group px-2 mt-3">
+                                <label for="input-4">Password</label>
+                                <input asp-for="AdminPassword" type="password" class="form-control" id="input-4" placeholder="Enter Password">
+                            </div>
+                            <div class="form-group px-2 mt-3">
+                                <label for="input-5">Confirm Password</label>
+                                <input type="password" class="form-control" name="cpassword" id="input-5" placeholder="Confirm Password">
+                            </div>
+                            <p cite="text-danger">@ViewBag.notsame</p>
+                            <div class="form-group px-2 mt-3">
+                                <div class="icheck-material-white">
+                                    <input type="checkbox" id="user-checkbox1" name="term" checked="" />
+                                    <label for="user-checkbox1" >I Agree Terms & Conditions</label>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex justify-content-center pt-3 mt-3">
+                                <button type="submit" name="register" class="btn btn-light px-5 "><i class="icon-lock"></i> Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--End Row-->
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
+
+    </div>
+    <!-- End container-fluid-->
+
+</div><!--End content-wrapper-->

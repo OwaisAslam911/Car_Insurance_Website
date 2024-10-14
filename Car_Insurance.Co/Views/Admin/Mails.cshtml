@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Car_Insurance.Co.Models.Feedback>
+@{
+    Layout = "_Admin";
+}
+@{
+    ViewData["Title"] = "Feedback";
+}
+
+
+<div id="wrapper">
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <style>
+                .btnb:hover{
+                    color:white;
+                }
+            </style>
+                <h2>Emails</h2>
+
+                <div id="accordion">
+                @foreach (var email in Model)
+                {
+                    var emailId = "email-" + email.MessageId;
+                    <div class="card">
+                        <div class="card-header" id="@($"heading-{emailId}")">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link btnb" type="button" data-toggle="collapse" data-target="@($"#collapse-{emailId}")" aria-expanded="true" aria-controls="@($"collapse-{emailId}")">
+                                    @email.Name (@email.Email)
+                                </button>
+                                <span class="float-right"> <a asp-controller="Admin" asp-action="DeleteMail" asp-route-id="@email.MessageId"><i class="fa-solid fa-trash " style="color:rgb(219, 37, 29);"></i></a> </span>
+                            </h5>
+                        </div>
+
+                        <div id="@($"collapse-{emailId}")" class="collapse" aria-labelledby="@($"heading-{emailId}")" data-parent="#accordion">
+                            <div class="card-body">
+                                <p><strong>Subject:</strong> @email.Subject</p>
+                                <p><strong>Message:</strong> @email.Message</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                }
+                </div>
+           
+            <!--End Dashboard Content-->
+           
+            
+        </div>
+        <!-- End container-fluid-->
+
+    </div><!--End content-wrapper-->
+
+
+</div><!--End wrapper-->

@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "ThankyouForm";
+}
+<style>
+  
+    .container2 {
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+    .thank-you {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .policy-details {
+        margin-bottom: 20px;
+    }
+
+        .policy-details p {
+            margin: 5px 0;
+        }
+
+    .contact {
+        margin-bottom: 20px;
+    }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+    .feedback {
+        margin-bottom: 20px;
+    }
+
+        .feedback textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+    .signature {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+        .signature p {
+            margin: 5px 0;
+        }
+
+    .header h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        padding: 0 10px;
+    }
+
+    .tlogo {
+        height: 30px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+</style>
+<div class="text-center alert alert-info" role="alert">
+    Your insurance approval is pending, and you will receive an email in one hour.
+</div>
+<div class="container2">
+    <div class="header">
+
+        <h3>Thank You for Choosing <img class="logo" src="images/logo.png" alt=""></h3>
+    </div>
+    <div class="thank-you">
+        <p>Dear @ViewBag.sessionuser</p>
+        <p class="text1">Thank you for choosing Carsor for your car insurance needs. We appreciate your trust and confidence in us.</p>
+    </div>
+    <div class="updates thank-you">
+        <p>We acknowledge that your request is currently pending. Our team is actively working on it and will provide you with an update shortly.</p>
+    </div>
+
+    <div class="contact">
+        <p><strong>Customer Support:</strong></p>
+        <p class="text">For any questions or assistance, please contact us at:</p>
+        <p><strong>Phone:</strong> 03198866712</p>
+        <p><strong>Email:</strong> <a href="mailto:fivebrothers1213@gmail.com">Carsor@gmail.com</a></p>
+    </div>
+
+    <div class="signature"></div>
+
+</div>
